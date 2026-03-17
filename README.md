@@ -2,6 +2,9 @@
 
 Aplicação web para gerenciar sua biblioteca pessoal. Adicione, edite, remova e filtre livros, acompanhe seu status de leitura e avalie cada título com estrelas.
 
+https://github.com/user-attachments/assets/43c69921-52af-4d28-8473-0ec5d747a132
+
+
 ---
 
 ## Tecnologias
