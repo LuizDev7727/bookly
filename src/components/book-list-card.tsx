@@ -28,7 +28,7 @@ export function BookListCard({
   comment,
 }: BookListCardProps) {
   return (
-    <div className="flex w-52 flex-col gap-3 rounded-xl border border-border bg-background p-3 shadow-sm">
+    <div className="flex flex-col gap-3 rounded-xl border border-border bg-background p-3 shadow-sm">
       {imageUrl ? (
         <img
           src={imageUrl}

@@ -62,19 +62,22 @@ export function BookList() {
   }
 
   return (
-    <div className="flex flex-wrap gap-4">
-      {books.map((book) => (
-        <BookListCard
-          id={book.id}
-          key={book.id}
-          title={book.title}
-          author={book.author}
-          imageUrl={book.imageUrl}
-          status={book.status}
-          stars={book.stars}
-          comment={book.comment}
-        />
-      ))}
+    <div className="flex flex-col flex-1 gap-4">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(13rem,1fr))] gap-4">
+        {books.map((book) => (
+          <BookListCard
+            key={book.id}
+            id={book.id}
+            title={book.title}
+            author={book.author}
+            imageUrl={book.imageUrl}
+            status={book.status}
+            stars={book.stars}
+            comment={book.comment}
+          />
+        ))}
+      </div>
+      <div ref={loadMoreRef} className="h-1" />
     </div>
   );
 }

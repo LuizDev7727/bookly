@@ -66,6 +66,8 @@ export function AddBookForm() {
   async function handleAddBook(formBody: AddBookFormType) {
     const newBook = formBody;
 
+    console.log({ newBook });
+
     await addBook(newBook);
   }
 
@@ -102,7 +104,7 @@ export function AddBookForm() {
           control={control}
           render={({ field }) => (
             <Select value={field.value} onValueChange={field.onChange}>
-              <SelectTrigger className="w-full">
+              <SelectTrigger className="w-full" data-testid="status-select">
                 <SelectValue placeholder="Selecione um status" />
               </SelectTrigger>
               <SelectContent>
@@ -147,13 +149,15 @@ export function AddBookForm() {
                 </button>
               ))}
               {field.value > 0 && (
-                <button
+                <Button
                   type="button"
-                  className="cursor-pointer text-muted-foreground hover:text-foreground"
+                  variant="ghost"
+                  size="icon-xs"
+                  data-testid="clear-stars"
                   onClick={() => field.onChange(0)}
                 >
                   <XIcon className="size-4" />
-                </button>
+                </Button>
               )}
             </div>
           )}
@@ -173,7 +177,12 @@ export function AddBookForm() {
           <p className="text-sm text-destructive">{errors.comment.message}</p>
         )}
       </div>
-      <Button type="submit" className="w-full" disabled={isSubmitting}>
+      <Button
+        type="submit"
+        className="w-full"
+        disabled={isSubmitting}
+        data-testid="submit-add-book"
+      >
         {isSubmitting && <Loader2 className="size-4" />}
         Adicionar
       </Button>

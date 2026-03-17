@@ -18,9 +18,9 @@ export function BookFilters() {
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
-            <SelectItem value="light">Light</SelectItem>
-            <SelectItem value="dark">Dark</SelectItem>
-            <SelectItem value="system">System</SelectItem>
+            <SelectItem value="Lendo">Lendo</SelectItem>
+            <SelectItem value="Lido">Lido</SelectItem>
+            <SelectItem value="Quero Ler">Quero Ler</SelectItem>
           </SelectGroup>
         </SelectContent>
       </Select>
