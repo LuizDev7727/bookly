@@ -3,7 +3,7 @@ export type Book = {
   imageUrl?: string;
   title: string;
   author: string;
-  status: "Lido" | "Lendo" | "Quero Ler";
+  status: "Lido" | "Lendo" | "Quero ler";
   stars: number;
   comment: string;
 };
