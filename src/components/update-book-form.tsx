@@ -126,7 +126,7 @@ export function UpdateBookForm({ book }: UpdateBookFormProps) {
               <SelectContent>
                 <SelectItem value="Lido">Lido</SelectItem>
                 <SelectItem value="Lendo">Lendo</SelectItem>
-                <SelectItem value="Quero Ler">Quero Ler</SelectItem>
+                <SelectItem value="Quero ler">Quero Ler</SelectItem>
               </SelectContent>
             </Select>
           )}
